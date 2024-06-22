@@ -9,10 +9,10 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/reset" element={<ResetPassword />} />
+        {/* <Route path="/reset" element={<ResetPassword />} /> */}
         <Route path="/new-password" element={<NewPassword />} /> 
         <Route path="/new-token" element={<NewToken />} /> 
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<ResetPassword />} />
       </Routes>
     </Router>
   );
