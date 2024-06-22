@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import './newpassword.css'; 
+import { toast } from "react-toastify";
 
 const NewPassword = () => {
   const [newPassword, setNewPassword] = useState('');
@@ -56,7 +57,7 @@ const NewPassword = () => {
         setMessage(data.message || 'Failed to reset password.');
       }
     } catch (error) {
-      setMessage('An error occurred. Please try again later.');
+      setMessage('Invalid Email or Token');
       console.error('Error resetting password:', error);
     } finally {
       setIsLoading(false);
